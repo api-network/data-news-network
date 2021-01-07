@@ -1,0 +1,34 @@
+---
+- name: Analysis
+  description: This is the description for Analysis.
+  featured: false
+- name: Analytics
+  description: This is the description for Analytics.
+  featured: false
+- name: Database
+  description: This is the description for Database.
+  featured: true
+- name: Forecasting
+  description: This is the description for Forecasting.
+  featured: false
+- name: In-Memory
+  description: This is the description for In-Memory.
+  featured: false
+- name: Key-Value
+  description: This is the description for Key-Value.
+  featured: false
+- name: Processing
+  description: This is the description for Processing.
+  featured: true
+- name: Query
+  description: This is the description for Query.
+  featured: false
+- name: Time Series
+  description: This is the description for Time Series.
+  featured: true
+- name: Visualization
+  description: This is the description for Visualization.
+  featured: false
+- name: Visualizations
+  description: This is the description for Visualizations.
+  featured: false

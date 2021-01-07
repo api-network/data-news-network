@@ -1,0 +1,13 @@
+---
+- name: CSV
+  description: This is the description for csv.
+  featured: true
+- name: Spreadsheets
+  description: This is the description for spreadsheets.
+  featured: true
+- name: Visualizations
+  description: This is the description for visualizations.
+  featured: true
+- name: JSON
+  description: This is the description for visualizations.
+  featured: true

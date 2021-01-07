@@ -1,0 +1,37 @@
+---
+- name: Aeronautics
+  description: This is the description for Aeronautics.
+  featured: false
+- name: Census
+  description: This is the description for Census.
+  featured: true
+- name: Commerce
+  description: This is the description for Commerce.
+  featured: false
+- name: Economic
+  description: This is the description for Economic.
+  featured: false
+- name: Environment
+  description: This is the description for Environment.
+  featured: true
+- name: Federal Government
+  description: This is the description for Federal Government.
+  featured: false
+- name: Labor
+  description: This is the description for Labor.
+  featured: true
+- name: Oceans
+  description: This is the description for Oceans.
+  featured: false
+- name: Space
+  description: This is the description for Space.
+  featured: false
+- name: Statistics
+  description: This is the description for Statistics.
+  featured: false
+- name: US Government
+  description: This is the description for US Government.
+  featured: false
+- name: Weather
+  description: This is the description for Weather.
+  featured: false

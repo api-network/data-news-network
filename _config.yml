@@ -1,0 +1,84 @@
+title: Data News Network
+description: One stop for all your data needs, showcasing blogs, news, agencies, services, organizations, tools, souirces, visualizations, and videos across a range of topics.
+tagline: The Data News Network
+image: images/network-logo-black.png
+url: https://dnn.laneworks.net
+twitter: DataNewsNetwork
+
+email: info@apievangelist.com
+
+github_user: api-network
+github_repo: template
+github_branch: master
+
+version:      1.1.1
+author:
+  name:       'Kin Lane'
+  email:      'info@apievangelist.com'
+markdown:     kramdown
+
+permalink: /:categories/:year/:month/:day/:title/
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", ".DS_Store"]
+
+paginate: 25
+paginate_path: "/blog/page:num"
+
+collections:
+  news:
+    output: true
+    permalink: /news/:path/
+  agencies:
+    output: true
+    permalink: /agencies/:path/
+  organizations:
+    output: true
+    permalink: /organizations/:path/
+  services:
+    output: true
+    permalink: /services/:path/
+  sources:
+    output: true
+    permalink: /sources/:path/    
+  tools:
+    output: true
+    permalink: /tools/:path/
+  topics:
+    output: true
+    permalink: /topics/:path/
+  videos:
+    output: true
+    permalink: /videos/:path/
+
+defaults:
+  - scope:
+      type: news
+    values:
+      layout: news
+  - scope:
+      type: agencies
+    values:
+      layout: agencies
+  - scope:
+      type: organizations
+    values:
+      layout: organizations
+  - scope:
+      type: services
+    values:
+      layout: services
+  - scope:
+      type: sources
+    values:
+      layout: sources
+  - scope:
+      type: tools
+    values:
+      layout: tools
+  - scope:
+      type: topics
+    values:
+      layout: topics
+  - scope:
+      type: videos
+    values:
+      layout: videos

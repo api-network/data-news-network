@@ -1,0 +1,43 @@
+---
+- name: Archaeology
+  description: This is the description for Archaeology.
+  featured: false
+- name: Artificial Intellgence
+  description: This is the description for Artificial Intellgence.
+  featured: false
+- name: Bias
+  description: This is the description for Bias.
+  featured: false
+- name: Climate
+  description: This is the description for Climate.
+  featured: true
+- name: Defense
+  description: This is the description for Defense.
+  featured: false
+- name: Environment
+  description: This is the description for Environment.
+  featured: true
+- name: Facial Recognition
+  description: This is the description for Facial Recognition.
+  featured: false
+- name: Open Source
+  description: This is the description for Open Source.
+  featured: false
+- name: Patents
+  description: This is the description for Patents.
+  featured: false
+- name: Request for Proposal
+  description: This is the description for Request for Proposal.
+  featured: false
+- name: Slave Trade
+  description: This is the description for Slave Trade.
+  featured: false
+- name: Surveillance
+  description: This is the description for Surveillance.
+  featured: true
+- name: Temperature
+  description: This is the description for Temperature.
+  featured: false
+- name: Universities
+  description: This is the description for Universities.
+  featured: false

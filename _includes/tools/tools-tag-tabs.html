@@ -1,0 +1,69 @@
+<!--Category Tabs Box-->
+<div class="category-tabs-box">
+  <!--Product Tabs-->
+  <div class="prod-tabs tabs-box">
+     <!--Tab Btns-->
+     <div class="tab-btns tab-buttons clearfix">
+        <div class="pull-left">
+           <div class="category">Tools</div>
+        </div>
+        <div class="pull-right">
+           <div>
+
+              <div data-tab="#prod-alls" class="tab-btn active-btn">All</div>
+
+              {% for tag in site.data.tools-tags %}
+                {% if tag.featured == true %}
+                  <div data-tab="#prod-design" class="tab-btn">{{ tag.name }}</div>
+                {% endif %}
+              {% endfor %}
+
+              <div class="dropdown dropdown-category">
+                 <button class="category-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More <span class="fa fa-angle-down"></span></button>
+                 <div class="dropdown-menu pull-right down-panel" aria-labelledby="dropdownMenu3">
+                    <ul class="more-category">
+
+                       {% for tag in site.data.tools-tags %}
+                        {% if tag.featured != true %}
+                         <li><a href="#">{{ tag.name }}</a></li>
+                        {% endif %}
+                       {% endfor %}
+
+                    </ul>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     <!--Tabs Container-->
+     <div class="tabs-content">
+
+        <!--Tab / Active Tab-->
+        <div class="tab active-tab" id="prod-alls">
+           <div class="content">
+              <div class="row clearfix">
+
+                {% assign tools = site.tools %}
+                {% assign tools = tools | sort: 'x-rank' | reverse %}
+                {% for entry in tools limit:18 %}
+                   <div class="services-block-two col-lg-6 col-md-6 col-sm-12">
+                      <div class="inner-box">
+                         <div class="image">
+                            <a href="{{ entry.url }}"><img src="{{ entry.image }}" alt="" style="border: 8px solid #ccc; width: 100%; height: 200px;" /></a>
+                         </div>
+                         <div class="lower-box" style="margin-bottom: 10px;">
+                            <h5><a href="{{ entry.url }}">{{ entry.title }}</a></h5>
+                            <div class="text">{{ entry.description | truncate: 250 | strip_html }}</div>
+                         </div>
+                      </div>
+                   </div>
+                 {% endfor %}
+
+              </div>
+           </div>
+        </div>
+
+     </div>
+  </div>
+</div>
+<!--End Category Info Tabs-->

@@ -1,0 +1,37 @@
+---
+- name: Analytics
+  description: This is the description for Analytics.
+  featured: true
+- name: Catalog
+  description: This is the description for Catalog.
+  featured: false
+- name: Datasets
+  description: This is the description for Datasets.
+  featured: false
+- name: Financial
+  description: This is the description for Financial.
+  featured: true
+- name: Intelligence
+  description: This is the description for Intelligence.
+  featured: false
+- name: Management
+  description: This is the description for Management.
+  featured: false
+- name: Marketplace
+  description: This is the description for Marketplace.
+  featured: false
+- name: Modeling
+  description: This is the description for Modeling.
+  featured: false
+- name: Public
+  description: This is the description for Public.
+  featured: false
+- name: Research
+  description: This is the description for Research.
+  featured: true
+- name: Science
+  description: This is the description for Science.
+  featured: false
+- name: Statistical
+  description: This is the description for Statistical.
+  featured: false

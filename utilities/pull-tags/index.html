@@ -1,0 +1,198 @@
+---
+layout: default
+title: Pull Tags
+---
+
+{% assign all_tags = "" %}
+
+{% assign news_tags = "" %}
+{% assign news = site.news %}
+{% for entry in news %}
+  {% for tag in entry.tags %}
+
+    {% assign check = news_tags | split: "," %}
+    {% assign already_in = 0 %}
+    {% for already in check %}
+      {% if already == tag  %}
+        {% assign already_in = 1 %}
+      {% endif %}
+    {% endfor %}
+    {% if already_in == 0  %}
+      {% assign news_tags = news_tags | append: "," | append: tag %}
+    {% endif %}
+
+    {% assign check = all_tags | split: "," %}
+    {% assign already_in = 0 %}
+    {% for already in check %}
+      {% if already == tag  %}
+        {% assign already_in = 1 %}
+      {% endif %}
+    {% endfor %}
+    {% if already_in == 0  %}
+      {% assign all_tags = all_tags | append: "," | append: tag %}
+    {% endif %}
+
+  {% endfor %}
+{% endfor %}
+
+{% assign agency_tags = "" %}
+{% assign agencies = site.agencies %}
+{% for entry in agencies %}
+  {% for tag in entry.tags %}
+
+    {% assign check = agency_tags | split: "," %}
+    {% assign already_in = 0 %}
+    {% for already in check %}
+      {% if already == tag  %}
+        {% assign already_in = 1 %}
+      {% endif %}
+    {% endfor %}
+    {% if already_in == 0  %}
+      {% assign agency_tags = agency_tags | append: "," | append: tag %}
+    {% endif %}
+
+    {% assign check = all_tags | split: "," %}
+    {% assign already_in = 0 %}
+    {% for already in check %}
+      {% if already == tag  %}
+        {% assign already_in = 1 %}
+      {% endif %}
+    {% endfor %}
+    {% if already_in == 0  %}
+      {% assign all_tags = all_tags | append: "," | append: tag %}
+    {% endif %}
+
+  {% endfor %}
+{% endfor %}
+
+{% assign organization_tags = "" %}
+{% assign organizations = site.organizations %}
+{% for entry in organizations %}
+  {% for tag in entry.tags %}
+
+    {% assign check = organization_tags | split: "," %}
+    {% assign already_in = 0 %}
+    {% for already in check %}
+      {% if already == tag  %}
+        {% assign already_in = 1 %}
+      {% endif %}
+    {% endfor %}
+    {% if already_in == 0  %}
+      {% assign organization_tags = organization_tags | append: "," | append: tag %}
+    {% endif %}
+
+    {% assign check = all_tags | split: "," %}
+    {% assign already_in = 0 %}
+    {% for already in check %}
+      {% if already == tag  %}
+        {% assign already_in = 1 %}
+      {% endif %}
+    {% endfor %}
+    {% if already_in == 0  %}
+      {% assign all_tags = all_tags | append: "," | append: tag %}
+    {% endif %}
+
+  {% endfor %}
+{% endfor %}
+
+{% assign service_tags = "" %}
+{% assign services = site.services %}
+{% for entry in services %}
+  {% for tag in entry.tags %}
+
+    {% assign check = service_tags | split: "," %}
+    {% assign already_in = 0 %}
+    {% for already in check %}
+      {% if already == tag  %}
+        {% assign already_in = 1 %}
+      {% endif %}
+    {% endfor %}
+    {% if already_in == 0  %}
+      {% assign service_tags = service_tags | append: "," | append: tag %}
+    {% endif %}
+
+    {% assign check = all_tags | split: "," %}
+    {% assign already_in = 0 %}
+    {% for already in check %}
+      {% if already == tag  %}
+        {% assign already_in = 1 %}
+      {% endif %}
+    {% endfor %}
+    {% if already_in == 0  %}
+      {% assign all_tags = all_tags | append: "," | append: tag %}
+    {% endif %}
+
+  {% endfor %}
+{% endfor %}
+
+{% assign tool_tags = "" %}
+{% assign tools = site.tools %}
+{% for entry in tools %}
+  {% for tag in entry.tags %}
+
+    {% assign check = tool_tags | split: "," %}
+    {% assign already_in = 0 %}
+    {% for already in check %}
+      {% if already == tag  %}
+        {% assign already_in = 1 %}
+      {% endif %}
+    {% endfor %}
+    {% if already_in == 0  %}
+      {% assign tool_tags = tool_tags | append: "," | append: tag %}
+    {% endif %}
+
+    {% assign check = all_tags | split: "," %}
+    {% assign already_in = 0 %}
+    {% for already in check %}
+      {% if already == tag  %}
+        {% assign already_in = 1 %}
+      {% endif %}
+    {% endfor %}
+    {% if already_in == 0  %}
+      {% assign all_tags = all_tags | append: "," | append: tag %}
+    {% endif %}
+
+  {% endfor %}
+{% endfor %}
+
+{% assign news_tags = news_tags | split: "," | sort %}
+<br><p>News</p>
+---
+{% for tag in news_tags %}{% if tag != '' %}<br>- name: {{ tag }}<br>
+  &nbsp;&nbsp;description: This is the description for {{ tag }}.<br>
+  &nbsp;&nbsp;featured: true{% endif %}{% endfor %}<br>
+
+{% assign agency_tags = agency_tags | split: "," | sort %}
+<br><p>Agencies</p>
+---
+{% for tag in agency_tags %}{% if tag != '' %}<br>- name: {{ tag }}<br>
+  &nbsp;&nbsp;description: This is the description for {{ tag }}.<br>
+  &nbsp;&nbsp;featured: true{% endif %}{% endfor %}<br>
+
+{% assign organization_tags = organization_tags | split: "," | sort %}
+<br><p>Organizations</p>
+---
+{% for tag in organization_tags %}{% if tag != '' %}<br>- name: {{ tag }}<br>
+  &nbsp;&nbsp;description: This is the description for {{ tag }}.<br>
+  &nbsp;&nbsp;featured: true{% endif %}{% endfor %}<br>
+
+{% assign service_tags = service_tags | split: "," | sort %}
+<br><p>Services</p>
+---
+{% for tag in service_tags %}{% if tag != '' %}<br>- name: {{ tag }}<br>
+  &nbsp;&nbsp;description: This is the description for {{ tag }}.<br>
+  &nbsp;&nbsp;featured: true{% endif %}{% endfor %}<br>
+
+{% assign tool_tags = tool_tags | split: "," | sort %}
+<br><p>Tools</p>
+---
+{% for tag in tool_tags %}{% if tag != '' %}<br>- name: {{ tag }}<br>
+  &nbsp;&nbsp;description: This is the description for {{ tag }}.<br>
+  &nbsp;&nbsp;featured: true{% endif %}{% endfor %}<br>
+
+{% assign all_tags = all_tags | split: "," | sort %}
+<br><p>All</p>
+---
+{% for tag in all_tags %}{% if tag != '' %}<br>- name: {{ tag }}<br>
+  &nbsp;&nbsp;description: This is the description for {{ tag }}.<br>
+  &nbsp;&nbsp;featured: true{% endif %}{% endfor %}<br>

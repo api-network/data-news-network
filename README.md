@@ -1,2 +1,2 @@
-# data-news-network
-The data news network.
+# Data News Network
+This is the data news network.
