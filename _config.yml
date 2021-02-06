@@ -30,24 +30,15 @@ collections:
   agencies:
     output: true
     permalink: /agencies/:path/
-  organizations:
+  technology:
     output: true
-    permalink: /organizations/:path/
-  services:
-    output: true
-    permalink: /services/:path/
-  sources:
-    output: true
-    permalink: /sources/:path/    
-  tools:
-    output: true
-    permalink: /tools/:path/
+    permalink: /technology/:path/
   topics:
     output: true
     permalink: /topics/:path/
-  videos:
+  resources:
     output: true
-    permalink: /videos/:path/
+    permalink: /resources/:path/
 
 defaults:
   - scope:
@@ -59,26 +50,14 @@ defaults:
     values:
       layout: agencies
   - scope:
-      type: organizations
+      type: technology
     values:
-      layout: organizations
-  - scope:
-      type: services
-    values:
-      layout: services
-  - scope:
-      type: sources
-    values:
-      layout: sources
-  - scope:
-      type: tools
-    values:
-      layout: tools
+      layout: technology
   - scope:
       type: topics
     values:
       layout: topics
   - scope:
-      type: videos
+      type: resources
     values:
-      layout: videos
+      layout: resources
